@@ -1,0 +1,563 @@
+:root{
+  --primaryColor:#4e3797;
+  --secondryColor:rgb(245, 246, 250);
+  --thirdColor:rgb(149 162 179);
+  --leqaa:rgb(203 129 250);
+  --camp: rgb(169 173 244);
+  --program:#73dadd;
+}
+@font-face {
+  font-family: Next;
+  src: url('./webfont/Next.ttf');
+}
+body{
+  margin: 0;
+  /* height: 200vh; */
+}
+*{
+  font-family: "Next";
+}
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media only screen and (max-width:600px) {
+  header{
+    background-color: var(--primaryColor);
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    position:fixed;
+    top: 0;
+    right: 0%;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  header>#logo{
+    width: 60vw;
+  }
+  #humbergerMenueImg{
+    width: 40px;
+    position: relative;
+    transition: 0.3s;
+  }
+  .headerMobile{
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    transition: 0.3s;
+
+  }
+  #myLinks{
+    display: none;
+    color: var(--primaryColor);
+    width: 90vw;
+    transition: 0.3s;
+  }
+  #myLinks>li{
+    list-style:none;
+    padding: 0.5rem 2rem;
+    border-bottom: 1px solid var(--thirdColor);
+    text-align: center;
+  }
+  .headerList>li, .headerList>li>a{
+    display: none;
+  }
+  .navbarLeft{
+    display: none;
+  }
+  #myLinks>li:hover{
+    color: var(--program) !important;
+  }
+  nav{
+    margin-top: 10vh;
+    padding: 0.25rem 1rem;
+    text-align: start;
+    background-color: var(--primaryColor);
+    color: white;
+  }
+  .campAndProgramHeader{
+    background-color: var(--secondryColor);
+    color: var(--primaryColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* width: 50vw; */
+    margin: 3rem auto;
+    padding: 1rem 0;
+    border-radius: 1rem;
+  }
+  .campAndProgramHeader>div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.1rem;
+  }
+  .campAndProgramHeader>h1{
+    margin: 0 0.2rem;
+  }
+  .campAndProgramDetails{
+    padding: 0.2rem 2rem;
+    border-radius: 1rem;
+    transition: 0.3s;
+  }
+  .old, .young:hover{
+    background-color: var(--primaryColor);
+    color: white;
+  }
+  .campAndProgramHeader>img{
+    background-color: var(--thirdColor);
+    padding: 1rem;
+    border-radius: 2rem;
+    margin: 0 5rem;
+    transition: 0.3s;
+  }
+  .campAndProgramHeader>img:hover{
+    background-color: var(--primaryColor);
+  }
+  .cardContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0.1rem;
+    margin: 1rem 0;
+    border-radius: 1rem;
+    width: 99vw;
+    /* height: 90vh; */
+    background-color: var(--secondryColor);
+  }
+  .cardAbove{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    height: 30vh;
+    border: 1px solid black;
+    border-right: 20px solid black;
+    border-radius: 1rem;
+    transition: 0.3s;
+    background-color: white;
+    margin: 1rem auto;
+    padding:0 1rem;
+  }
+  .card{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    padding: 1rem;
+    width: 80vw;
+    height: 30vh;
+    align-items: start;
+  }
+  
+  #undisable:hover{
+    width: 85vw;
+    height: 35vh;
+  }
+  .cardLocation,.cardDate{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .cardLocation{
+    gap: 3rem;
+  }
+  .cardDate{
+    justify-content: space-between;
+  }
+  .cardText{
+    color: gray;
+    font-size: large;
+    margin-top: 0;
+  }
+  .detailsBtn{
+    border: 1px solid black;
+    border-radius: 2rem;
+    padding: 0.25rem 2rem;
+    align-self: center;
+    transition: 0.3s;
+  }
+  #leqaBtn:hover{
+    background-color: var(--leqaa);
+    color: white !important;
+  }
+  #campBtn:hover{
+    background-color: var(--camp);
+    color: white !important;
+  }
+  #programBtn:hover{
+    background-color: var(--program);
+    color: white !important;
+  }
+  #disableBtn{
+    background-color: var(--secondryColor) !important;
+    color: gray !important;
+    border-color: gray !important;
+  }
+  .btnMore{
+    padding: 0.5rem 4rem;
+    border-radius: 1rem;
+    color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+    width: fit-content;
+    margin: auto;
+  }
+  .btnMore:hover{
+    background-color: var(--primaryColor);
+    color: white;
+    transition: 0.3s;
+  }
+  .registrationSteps{
+    background-color: var(--secondryColor);
+    color: var(--primaryColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin: 3rem 0;
+    padding: 4rem 0;
+  }
+  .circleContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .circleContainer>img{
+    background-color: var(--program);
+    border-radius: 4rem;
+    padding: 1rem;
+  }
+  footer{
+    background-color: var(--primaryColor);
+    width: 100%;
+    /* height: 25vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+  }
+  .footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 0.3s ease-in-out;
+  }
+  .footer>#logo{
+    width: 90vw;
+  }
+  .footerContainerDivs{
+    display: flex;
+    flex-direction: column;
+  }
+  .footer>*>a{
+    list-style: none;
+    margin: 1rem;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+  }
+  .footerContainerImgs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer>h4{
+    color: white;
+    font-weight: 300;
+    margin-top: 2rem;
+  }
+  .footerContainerDivs>a:hover{
+    color: var(--program);
+    transition: 0.3s;
+  }
+  .footerContainerImgs>img{
+    transition: 0.3s;
+  }
+  .footerContainerImgs>img:hover{
+    width: 25px;
+    height: 25px;
+  }
+  
+}
+
+
+
+
+
+/* **************************************************************************************************************************** */
+@media only screen and (min-width:601px) {
+  header{
+    background-color: var(--primaryColor);
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    position:fixed;
+    top: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  header>#logo{
+    width: 15vw;
+  }
+  .headerMobile{
+    display: none;
+  }
+  .humbergerMenue{
+    display: none;
+  }
+  .headerList>li, .headerList>li>a{
+    list-style: none;
+    margin: 1rem;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+  }
+  /* .headerLeft{
+  } */
+  .navbarLeft{
+    font-size: large;
+    font-weight: 500;
+    color: white;
+    display: inline;
+    margin-right: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .navbarLeft:hover, .headerList>li>a:hover{
+    color: var(--program) !important;
+  }
+  nav{
+    margin-top: 20vh;
+    padding: 0.25rem 3rem;
+    text-align: start;
+    background-color: var(--primaryColor);
+    color: white;
+  }
+  .campAndProgramHeader{
+    background-color: var(--secondryColor);
+    color: var(--primaryColor);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: fit-content;
+    margin: 3rem auto;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+  }
+  .campAndProgramHeader>div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  .campAndProgramHeader>h1{
+    margin: 0 5rem;
+  }
+  .campAndProgramDetails{
+    padding: 0.5rem 4rem;
+    border-radius: 1rem;
+    transition: 0.3s;
+  }
+  .old, .young:hover{
+    background-color: var(--primaryColor);
+    color: white;
+  }
+  .campAndProgramHeader>img{
+    background-color: var(--thirdColor);
+    padding: 1rem;
+    border-radius: 2rem;
+    margin: 0 5rem;
+    transition: 0.3s;
+  }
+  .campAndProgramHeader>img:hover{
+    background-color: var(--primaryColor);
+  }
+  .cardContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 3rem;
+    margin: 3rem auto;
+    border-radius: 1rem;
+    width: 90vw;
+    height: 90vh;
+    background-color: var(--secondryColor);
+  }
+  .cardAbove{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25vw;
+    height: 35vh;
+    border: 1px solid black;
+    border-right: 20px solid black;
+    border-radius: 1rem;
+    transition: 0.3s;
+    background-color: white;
+    margin: 1rem;
+  }
+  .card{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    padding: 1rem;
+    width: 20vw;
+    height: 30vh;
+    align-items: start;
+  }
+  
+  #undisable:hover{
+    width: 27vw;
+    height: 37vh;
+  }
+  .cardLocation,.cardDate{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .cardLocation{
+    gap: 3rem;
+  }
+  .cardDate{
+    justify-content: space-between;
+  }
+  .cardText{
+    color: gray;
+    font-size: large;
+    margin-top: 0;
+  }
+  .detailsBtn{
+    border: 1px solid black;
+    border-radius: 2rem;
+    padding: 0.25rem 2rem;
+    align-self: center;
+    transition: 0.3s;
+  }
+  #leqaBtn:hover{
+    background-color: var(--leqaa);
+    color: white !important;
+  }
+  #campBtn:hover{
+    background-color: var(--camp);
+    color: white !important;
+  }
+  #programBtn:hover{
+    background-color: var(--program);
+    color: white !important;
+  }
+  #disableBtn{
+    background-color: var(--secondryColor) !important;
+    color: gray !important;
+    border-color: gray !important;
+  }
+  .btnMore{
+    padding: 0.5rem 4rem;
+    border-radius: 1rem;
+    color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+    width: fit-content;
+    margin: auto;
+  }
+  .btnMore:hover{
+    background-color: var(--primaryColor);
+    color: white;
+    transition: 0.3s;
+  }
+  .registrationSteps{
+    background-color: var(--secondryColor);
+    color: var(--primaryColor);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 3rem 0;
+    padding: 4rem 0;
+  }
+  .circleContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .circleContainer>img{
+    background-color: var(--program);
+    border-radius: 4rem;
+    padding: 1rem;
+  }
+  footer{
+    background-color: var(--primaryColor);
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+  }
+  .footer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 0.3s ease-in-out;
+  }
+  .footer>#logo{
+    width: 15vw;
+  }
+  .footerContainerDivs{
+    display: flex;
+    flex-direction: column;
+  }
+  .footer>*>a{
+    list-style: none;
+    margin: 1rem;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+  }
+  .footerContainerImgs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer>h4{
+    color: white;
+    font-weight: 300;
+    margin-top: 2rem;
+  }
+  .footerContainerDivs>a:hover{
+    color: var(--program);
+    transition: 0.3s;
+  }
+  .footerContainerImgs>img{
+    transition: 0.3s;
+  }
+  .footerContainerImgs>img:hover{
+    width: 25px;
+    height: 25px;
+  }
+  
+}
